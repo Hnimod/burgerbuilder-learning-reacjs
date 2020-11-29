@@ -24,10 +24,15 @@
 .menuBtn {
   color: white;
   cursor: pointer;
+  display: none;
 }
 
 @media (max-width: 499px) {
   .DesktopOnly {
     display: none;
+  }
+
+  .menuBtn {
+    display: block;
   }
 }

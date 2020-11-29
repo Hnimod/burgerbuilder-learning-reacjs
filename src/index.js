@@ -27,10 +27,15 @@ const roorReducer = combineReducers({
   auth: authReducer,
 });
 
-const store = createStore(
-  roorReducer,
-  composeEnhancers(applyMiddleware(thunk, sagaMiddleware))
-);
+let store;
+if (composeEnhancers) {
+  store = createStore(
+    roorReducer,
+    composeEnhancers(applyMiddleware(thunk, sagaMiddleware))
+  );
+} else {
+  store = createStore(roorReducer, applyMiddleware(thunk, sagaMiddleware));
+}
 
 sagaMiddleware.run(watchAuth);
 sagaMiddleware.run(watchBurgerBuidler);
