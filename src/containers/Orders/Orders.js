@@ -24,6 +24,10 @@ const Orders = (props) => {
           price={order.price}
         />
       ));
+    } else {
+      orders = (
+        <h1 style={{ textAlign: 'center' }}>You do not have any order</h1>
+      );
     }
   }
   return <div>{orders}</div>;
