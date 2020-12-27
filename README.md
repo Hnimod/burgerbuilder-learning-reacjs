@@ -2,7 +2,7 @@
 
 A project focusing on core features of ReactJS library: Hooks, Custom Hooks, Redux, Thunk, Saga, HOC.
 
-https://react-my-burger-382c5.web.app/burger-builder
+Demo: https://react-my-burger-382c5.web.app/burger-builder
 
 <br/>
 
